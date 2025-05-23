@@ -1,0 +1,278 @@
+/* Estilos generales */
+body {
+    font-family: 'Lora', Georgia, serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: black;
+    background-color: #f5f5f5;
+}
+
+header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/banner-bg.jpg) center/cover no-repeat;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Navegación */
+nav {
+    background: linear-gradient(to right, #8126b5, #e0298b);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+section {
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: none;
+}
+
+section.activa {
+  display: block;
+}
+
+aside {
+    width: 350px;
+    min-width: 250px;
+    max-width: 100%;
+    background: white;
+    max-height: max-content;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+aside a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: normal;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    transition: none;
+}
+
+aside a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #6c5ce7;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Layout principal */
+.contenedor {
+    display: flex;
+    gap: 1rem;
+    max-width: 75%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Tarjetas de contenido */
+.tarjeta {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Texto en columnas */
+.texto-periodico {
+    column-count: 2;
+    column-gap: 1rem;
+    text-align: justify;
+    padding: 1rem 0;
+}
+
+/* Footer de tarjeta */
+#footer-tarjeta {
+    color: black;
+    background-color: white;
+    margin-top: 1rem;
+    text-align: left;
+    font-style: italic;
+}
+
+/* Botón volver arriba */
+#btn-volver-arriba {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#btn-volver-arriba.mostrar {
+    opacity: 1;
+}
+
+img[alt="Imagen de psicología"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagenes-psicologia {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 1rem 0;
+}
+.imagenes-psicologia img {
+    width: 35%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+    
+    .texto-periodico {
+        column-count: 1;
+    }
+}
+
+footer {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 1fr 0;
+    position: relative;
+}
+
+  .tablas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid black;
+  }
+  
+  .tablas thead th {
+    background-color: #6a5acd; /* Morado medio */
+    color: black;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  #tabla0{
+    background-color: #9cc2e5;
+  }
+  
+  #tabla1{
+    background-color: #f4b183;
+  }
+  
+  #tabla2{
+    background-color: #a8d08d;
+  }
+
+  #tabla3{
+    background-color: #ffd965;
+  }
+
+  #tabla4{
+    background-color: #d492c6;
+  }
+
+  .tablas tbody td {
+    padding: 12px;
+    vertical-align: top;
+  }
+  
+  .tablas tbody tr:nth-child(odd) {
+    background-color: #f0f8ff; /* Celeste muy claro */
+  }
+  
+  .tablas tbody tr:nth-child(even) {
+    background-color: #e6e6fa; /* Lila claro */
+  }
+
+          .tabla-guia {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .tabla-guia th {
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .tabla-guia td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            vertical-align: top;
+        }
+        
+        .tabla-guia tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .tabla-guia tr:hover {
+            background-color: #e9f7fe;
+        }
+        
+        .tabla-evaluacion {
+            width: 60%;
+            margin: 30px auto;
+            border-collapse: collapse;
+        }
+        
+        .tabla-evaluacion th, .tabla-evaluacion td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .tabla-evaluacion th {
+            background-color: #2ecc71;
+            color: white;
+        }
+        
+        .ejemplo {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
